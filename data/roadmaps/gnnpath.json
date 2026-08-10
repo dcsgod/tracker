@@ -1,0 +1,42 @@
+{
+  "id": "gnnpath",
+  "title": "Graph Neural Networks Path",
+  "sourceUrl": "https://dcsgod.github.io/Gnnpath/",
+  "coverage": "partial",
+  "stub": true,
+  "stubNote": "This site had dynamic content not fetchable at build time. Seeded from GNN section inside mlpath. Visit the live site and expand topics below.",
+  "phases": [
+    { "id": "gnn-01", "title": "Graph Theory Foundations", "priority": "must", "stretch": false, "topics": [
+      { "id": "gnn-01-graph-basics", "title": "Graph Theory — Adjacency Matrices, Graph Properties, Spectral Graph Theory", "papers": [] },
+      { "id": "gnn-01-node-edge", "title": "Node/Edge/Graph Classification Tasks", "papers": [] }
+    ]},
+    { "id": "gnn-02", "title": "Message Passing Framework", "priority": "must", "stretch": false, "topics": [
+      { "id": "gnn-02-message-passing", "title": "Message Passing Neural Networks (MPNN) — Aggregation, Update, Readout", "papers": ["Gilmer et al. - MPNN (2017)"] },
+      { "id": "gnn-02-weisfeiler-leman", "title": "Weisfeiler-Leman Test & GNN Expressivity", "papers": ["Xu et al. - How Powerful are GNNs? (2018)"] }
+    ]},
+    { "id": "gnn-03", "title": "Core GNN Architectures", "priority": "must", "stretch": false, "topics": [
+      { "id": "gnn-03-gcn", "title": "GCN — Graph Convolutional Network", "papers": ["Kipf & Welling - Semi-Supervised Classification with GCNs (2016)"] },
+      { "id": "gnn-03-graphsage", "title": "GraphSAGE — Inductive Representation Learning", "papers": ["Hamilton et al. - GraphSAGE (2017)"] },
+      { "id": "gnn-03-gat", "title": "GAT — Graph Attention Networks", "papers": ["Velickovic et al. - GAT (2017)"] },
+      { "id": "gnn-03-gin", "title": "GIN — Graph Isomorphism Network", "papers": ["Xu et al. - GIN (2018)"] },
+      { "id": "gnn-03-chebnet", "title": "ChebNet — Spectral Graph Convolutions", "papers": ["Defferrard et al. - ChebNet (2016)"] }
+    ]},
+    { "id": "gnn-04", "title": "Graph Pooling & Hierarchical GNNs", "priority": "must", "stretch": false, "topics": [
+      { "id": "gnn-04-diffpool", "title": "DiffPool — Differentiable Graph Pooling", "papers": ["Ying et al. - DiffPool (2018)"] },
+      { "id": "gnn-04-mincut", "title": "MinCUT Pooling, Top-k Pooling", "papers": [] }
+    ]},
+    { "id": "gnn-05", "title": "Graph Transformers", "priority": "must", "stretch": false, "topics": [
+      { "id": "gnn-05-graph-transformer", "title": "Graph Transformer — Graphformer, GraphGPS", "papers": ["Ying et al. - Graphormer (2021)"] },
+      { "id": "gnn-05-positional-encoding", "title": "Graph Positional Encodings — Laplacian PE, RWPE", "papers": [] }
+    ]},
+    { "id": "gnn-06", "title": "Heterogeneous & Knowledge Graphs", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "gnn-06-hetero", "title": "Heterogeneous GNNs — HAN, HGT, Relational GCN", "papers": [] },
+      { "id": "gnn-06-kg", "title": "Knowledge Graph Embeddings — TransE, RotatE, ComplEx", "papers": [] }
+    ]},
+    { "id": "gnn-07", "title": "GNNs for Science & Applications", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "gnn-07-molecules", "title": "Molecular GNNs — SchNet, DimeNet, SE(3)-Transformers", "papers": [] },
+      { "id": "gnn-07-social", "title": "Social Network Analysis with GNNs", "papers": [] },
+      { "id": "gnn-07-combinatorial", "title": "GNNs for Combinatorial Optimization — TSP, Graph Coloring", "papers": [] }
+    ]}
+  ]
+}

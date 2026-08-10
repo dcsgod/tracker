@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mastery Tracker — Ravi's CP & ML Progress Dashboard</title>
+  <meta name="description" content="Personal progress tracker for CP/DSA (Codeforces 2100), ML/DL mastery, NLP, LLM, Time Series, RL, GNN, Diffusion Models, and daily habits — dcsgod." />
+  <meta name="author" content="Ravi Kumar (dcsgod)" />
+  <meta property="og:title" content="Mastery Tracker — CP & ML Progress" />
+  <meta property="og:description" content="Daily habits, Codeforces problem tracker, and ML/DL roadmap progress — all in one dashboard." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="app-logo">
+        <div class="app-logo-icon">🎯</div>
+        <div>
+          <div class="app-logo-text">Mastery Tracker</div>
+          <div class="app-logo-sub">dcsgod · CP &amp; ML Dashboard</div>
+        </div>
+      </div>
+
+      <nav class="nav-tabs" role="tablist">
+        <button class="nav-tab active" data-tab="overview" id="tab-btn-overview" role="tab" aria-selected="true">
+          <span class="tab-icon">📊</span><span>Overview</span>
+        </button>
+        <button class="nav-tab" data-tab="roadmaps" id="tab-btn-roadmaps" role="tab" aria-selected="false">
+          <span class="tab-icon">🗺️</span><span>Roadmaps</span>
+        </button>
+        <button class="nav-tab" data-tab="cp" id="tab-btn-cp" role="tab" aria-selected="false">
+          <span class="tab-icon">⚡</span><span>CP/DSA</span>
+        </button>
+        <button class="nav-tab" data-tab="daily" id="tab-btn-daily" role="tab" aria-selected="false">
+          <span class="tab-icon">📅</span><span>Daily</span>
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <div class="sync-status" id="sync-status">
+          <div class="sync-dot" id="sync-dot"></div>
+          <span id="sync-text">Not connected</span>
+        </div>
+        <button class="btn-icon" id="settings-btn" title="Settings" aria-label="Open settings">⚙️</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Overview Tab -->
+      <section class="tab-panel active" id="tab-overview" role="tabpanel" aria-labelledby="tab-btn-overview">
+        <div id="overview-root"></div>
+      </section>
+
+      <!-- Roadmaps Tab -->
+      <section class="tab-panel" id="tab-roadmaps" role="tabpanel" aria-labelledby="tab-btn-roadmaps">
+        <div id="roadmaps-root"></div>
+      </section>
+
+      <!-- CP/DSA Tab -->
+      <section class="tab-panel" id="tab-cp" role="tabpanel" aria-labelledby="tab-btn-cp">
+        <div id="cp-root"></div>
+      </section>
+
+      <!-- Daily Tracker Tab -->
+      <section class="tab-panel" id="tab-daily" role="tabpanel" aria-labelledby="tab-btn-daily">
+        <div id="daily-root"></div>
+      </section>
+    </main>
+
+    <!-- Settings Overlay -->
+    <div class="overlay" id="settings-overlay" role="dialog" aria-modal="true" aria-label="Settings">
+      <div class="modal">
+        <div id="settings-root"></div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

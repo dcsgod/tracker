@@ -1,0 +1,119 @@
+{
+  "id": "timeseriespath",
+  "title": "Time Series, Forecasting & Causal Inference",
+  "sourceUrl": "https://dcsgod.github.io/timeseriespath/",
+  "coverage": "full",
+  "phases": [
+    {
+      "id": "ts-phase-01",
+      "title": "Foundations of Time Series",
+      "priority": "must",
+      "topics": [
+        { "id": "ts-stationarity", "title": "Stationarity — ADF Test, KPSS, Unit Roots", "papers": [] },
+        { "id": "ts-acf-pacf", "title": "ACF & PACF — Autocorrelation, Partial Autocorrelation", "papers": [] },
+        { "id": "ts-decomposition", "title": "Decomposition — Trend, Seasonality, Residuals (STL, X-13)", "papers": [] },
+        { "id": "ts-smoothing", "title": "Exponential Smoothing — SES, Holt-Winters, ETS", "papers": [] },
+        { "id": "ts-arima", "title": "ARIMA — AR, MA, SARIMA, Auto-ARIMA", "papers": [] },
+        { "id": "ts-spectral", "title": "Spectral Analysis — Fourier Transform, Periodogram, Wavelets", "papers": [] }
+      ]
+    },
+    {
+      "id": "ts-phase-02",
+      "title": "Volatility Modeling",
+      "priority": "must",
+      "topics": [
+        { "id": "ts-garch", "title": "ARCH/GARCH — Volatility Clustering, EGARCH, GJR-GARCH", "papers": ["Engle - ARCH (1982)", "Bollerslev - GARCH (1986)"] },
+        { "id": "ts-cointegration", "title": "Cointegration — Engle-Granger, Johansen Test, Error Correction Models", "papers": [] },
+        { "id": "ts-var", "title": "VAR/SVAR — Vector Autoregression, Structural VAR, Impulse Response", "papers": [] }
+      ]
+    },
+    {
+      "id": "ts-phase-03",
+      "title": "State Space & Bayesian Methods",
+      "priority": "must",
+      "topics": [
+        { "id": "ts-kalman", "title": "Kalman Filter & Smoother — Linear Gaussian SSM", "papers": ["Kalman - A New Approach to Linear Filtering (1960)"] },
+        { "id": "ts-particle-filter", "title": "Particle Filters — Sequential Monte Carlo, SMC", "papers": [] },
+        { "id": "ts-bvar", "title": "Bayesian VAR — Minnesota Prior, BVAR Forecasting", "papers": [] },
+        { "id": "ts-regime-switching", "title": "Regime-Switching — Markov-Switching, Hidden Markov Models for TS", "papers": [] }
+      ]
+    },
+    {
+      "id": "ts-phase-04",
+      "title": "Modern Forecasting",
+      "priority": "must",
+      "topics": [
+        { "id": "ts-prophet", "title": "Prophet — Facebook's Decomposable Time Series Model", "papers": ["Taylor & Letham - Forecasting at Scale (Prophet 2017)"] },
+        { "id": "ts-probabilistic", "title": "Probabilistic Forecasting — Prediction Intervals, Conformal Prediction", "papers": [] },
+        { "id": "ts-hierarchical", "title": "Hierarchical Forecasting — Reconciliation, Bottom-Up, MinT", "papers": [] },
+        { "id": "ts-m4-m5", "title": "M4/M5 Competition Methods — Ensemble Approaches", "papers": [] },
+        { "id": "ts-nowcasting", "title": "Nowcasting — Mixed-Frequency, Dynamic Factor Models", "papers": [] }
+      ]
+    },
+    {
+      "id": "ts-phase-05",
+      "title": "ML for Time Series",
+      "priority": "must",
+      "topics": [
+        { "id": "ts-feature-engineering", "title": "Feature Engineering — Lag Features, Rolling Stats, tsfresh", "papers": [] },
+        { "id": "ts-tree-methods", "title": "Tree Methods — LightGBM, XGBoost for TS", "papers": [] },
+        { "id": "ts-lstm-tcn", "title": "Deep Learning — LSTM, TCN, WaveNet for TS", "papers": ["Oord et al. - WaveNet (2016)"] },
+        { "id": "ts-transformers", "title": "TS Transformers — Informer, Autoformer, PatchTST, iTransformer", "papers": ["Zhou et al. - Informer (2021)", "Nie et al. - PatchTST (2022)"] },
+        { "id": "ts-nbeats", "title": "N-BEATS, N-HiTS — Neural Basis Expansion", "papers": ["Oreshkin et al. - N-BEATS (2019)"] },
+        { "id": "ts-deepar", "title": "DeepAR, TFT — Probabilistic Deep TS Models", "papers": ["Salinas et al. - DeepAR (2019)"] },
+        { "id": "ts-mamba-ts", "title": "Mamba & Foundation Models for TS — Chronos, TimesFM, MOIRAI", "papers": ["Ansari et al. - Chronos (2024)"] },
+        { "id": "ts-anomaly", "title": "Anomaly & Change-Point Detection in TS", "papers": [] },
+        { "id": "ts-classification", "title": "TS Classification — Rocket, Shapelet, InceptionTime", "papers": [] }
+      ]
+    },
+    {
+      "id": "ts-phase-06",
+      "title": "Causal Inference",
+      "priority": "must",
+      "topics": [
+        { "id": "ts-potential-outcomes", "title": "Potential Outcomes Framework — ATE, ATT, Rubin Causal Model", "papers": ["Rubin - Estimating Causal Effects (1974)"] },
+        { "id": "ts-dags", "title": "DAGs & SCMs — d-separation, Backdoor Criterion, Do-Calculus", "papers": ["Pearl - Causality Ch1-3"] },
+        { "id": "ts-did", "title": "Difference-in-Differences — Parallel Trends, Staggered DiD", "papers": [] },
+        { "id": "ts-rdd", "title": "Regression Discontinuity Design — Sharp & Fuzzy RDD", "papers": [] },
+        { "id": "ts-iv", "title": "Instrumental Variables — 2SLS, Weak Instruments", "papers": [] },
+        { "id": "ts-synthetic-control", "title": "Synthetic Control — Abadie et al., Augmented Synthetic Control", "papers": ["Abadie & Gardeazabal - Synthetic Control (2003)"] },
+        { "id": "ts-cate", "title": "CATE & Causal Forests — Heterogeneous Treatment Effects", "papers": ["Wager & Athey - Causal Forests (2018)"] },
+        { "id": "ts-causal-ts", "title": "Causal Time Series — Granger Causality, PCMCI", "papers": [] }
+      ]
+    },
+    {
+      "id": "ts-phase-07",
+      "title": "Double/Debiased ML & Semiparametrics",
+      "priority": "must",
+      "topics": [
+        { "id": "ts-dml", "title": "Double/Debiased ML — Neyman Orthogonality, Cross-Fitting", "papers": ["Chernozhukov et al. - Double/Debiased ML (2018)"] },
+        { "id": "ts-tmle", "title": "TMLE — Targeted Maximum Likelihood Estimation", "papers": [] },
+        { "id": "ts-semiparametric", "title": "Semiparametric Efficiency — Efficient Influence Functions", "papers": [] }
+      ]
+    },
+    {
+      "id": "ts-phase-08",
+      "title": "Panel Data & Spatial Time Series",
+      "priority": "must",
+      "topics": [
+        { "id": "ts-panel", "title": "Panel Data — Fixed Effects, Random Effects, Hausman Test", "papers": [] },
+        { "id": "ts-dynamic-panel", "title": "Dynamic Panel — GMM, Arellano-Bond, System GMM", "papers": [] },
+        { "id": "ts-spatial", "title": "Spatial Econometrics — SAR, SEM, Spatial Weight Matrices", "papers": [] },
+        { "id": "ts-gnn-spatial", "title": "GNNs for Spatial Time Series — DCRNN, Graph WaveNet", "papers": [] }
+      ]
+    },
+    {
+      "id": "ts-phase-09",
+      "title": "Frontier Research",
+      "priority": "must",
+      "topics": [
+        { "id": "ts-llm-reasoning", "title": "LLMs as TS Reasoners — Chronos, TimesFM, MOIRAI, MOMENT", "papers": ["Ansari et al. - Chronos (2024)"] },
+        { "id": "ts-online-adaptive", "title": "Online & Adaptive Learning for TS", "papers": [] },
+        { "id": "ts-rl-sequential", "title": "RL for Sequential Decisions — Inventory, Pricing, Energy", "papers": [] },
+        { "id": "ts-finance", "title": "TS in Finance — Factor Models, Regime Detection, Alpha Research", "papers": [] },
+        { "id": "ts-climate", "title": "TS in Climate & Energy — Weather Forecasting, Grid Optimization", "papers": [] },
+        { "id": "ts-software", "title": "Software Tooling — Darts, statsforecast, sktime, Nixtla", "papers": [] }
+      ]
+    }
+  ]
+}
