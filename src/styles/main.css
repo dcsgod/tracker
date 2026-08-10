@@ -1212,40 +1212,211 @@ select.input option { background: #1a2235; }
 .empty-state-title { font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; }
 .empty-state-desc { font-size: 0.875rem; }
 
-/* ─── Responsive ─────────────────────────────────────────────────────────── */
-@media (max-width: 900px) {
+/* ─── Safe-area (notched phones) ─────────────────────────────────────────── */
+.app-header {
+  padding-left: max(24px, env(safe-area-inset-left));
+  padding-right: max(24px, env(safe-area-inset-right));
+}
+
+.main-content {
+  padding-bottom: max(24px, calc(env(safe-area-inset-bottom) + 80px));
+}
+
+/* ─── Bottom Nav (mobile only, replaces top nav tabs) ────────────────────── */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 13, 20, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--glass-border);
+  padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color var(--transition);
+  min-width: 56px;
+}
+
+.bottom-nav-item .bnav-icon { font-size: 1.4rem; line-height: 1; }
+.bottom-nav-item.active { color: var(--primary); }
+.bottom-nav-item.active .bnav-icon { filter: drop-shadow(0 0 6px rgba(79,172,254,0.6)); }
+
+/* ─── iPad / Tablet (768px – 1024px) ────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
   .roadmap-layout,
   .cp-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 220px 1fr;
+    gap: 14px;
   }
 
   .roadmap-sidebar,
   .cp-topic-list {
-    position: static;
-    max-height: 240px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px;
+    position: sticky;
+    top: calc(var(--header-height) + 16px);
+    max-height: calc(100vh - var(--header-height) - 32px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
   }
 
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .grid-3 { grid-template-columns: 1fr 1fr; }
-  .nav-tabs { overflow-x: auto; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
   .main-content { padding: 16px; }
+
+  .overview-title { font-size: 2rem; }
+  .stat-value { font-size: 1.6rem; }
 }
 
-@media (max-width: 640px) {
-  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .roadmap-sidebar,
-  .cp-topic-list { grid-template-columns: 1fr; }
-  .app-header { padding: 0 16px; }
-  .nav-tab .tab-icon + span { display: none; }
+/* ─── Large Mobile (481px – 767px) ──────────────────────────────────────── */
+@media (max-width: 767px) {
+  /* Show bottom nav, hide top nav tabs */
+  .nav-tabs { display: none; }
+  .bottom-nav { display: flex; }
+
+  /* Header — compact */
+  .app-header {
+    padding: 0 16px;
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+    height: 56px;
+  }
+
+  .app-logo-icon { width: 30px; height: 30px; font-size: 15px; }
+  .app-logo-text { font-size: 0.95rem; }
   .app-logo-sub { display: none; }
+
+  .main-content {
+    padding: 12px 14px;
+    padding-bottom: max(88px, calc(env(safe-area-inset-bottom) + 72px));
+  }
+
+  /* Grids — stack on mobile */
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 12px; }
+
+  /* Roadmap layout — stack */
+  .roadmap-layout,
+  .cp-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Sidebar becomes horizontal scrolling strip */
+  .roadmap-sidebar,
+  .cp-topic-list {
+    position: static;
+    max-height: none;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 6px;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .roadmap-sidebar::-webkit-scrollbar,
+  .cp-topic-list::-webkit-scrollbar { display: none; }
+
+  .roadmap-sidebar-item,
+  .cp-topic-item {
+    flex-shrink: 0;
+    min-width: 140px;
+    max-width: 180px;
+  }
+
+  /* Overview hero */
+  .overview-hero { padding: 20px 16px; }
+  .overview-title { font-size: 1.6rem; }
+  .overview-ring { width: 110px; height: 110px; }
+  .overview-ring-value { font-size: 1.4rem; }
+  .overview-subtitle { font-size: 0.85rem; }
+
+  /* Stat cards — 2 columns */
+  .grid-4 { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat-card { padding: 14px; }
+  .stat-value { font-size: 1.5rem; }
+  .stat-label { font-size: 0.7rem; }
+
+  /* Card bodies — tighter */
+  .card-body { padding: 14px 16px; }
+  .card-header { padding: 14px 16px 12px; }
+
+  /* Phase cards */
+  .phase-header { padding: 12px 14px; }
+  .topic-list { padding: 4px 14px 12px; }
+
+  /* Daily table — tighter */
+  .daily-table th, .daily-table td { padding: 4px 6px; }
+  .daily-table { font-size: 0.75rem; }
+  .habit-checkbox { width: 18px; height: 18px; }
+
+  /* Streak pills */
+  .streak-row { gap: 6px; }
+  .streak-pill { padding: 4px 10px; font-size: 0.72rem; }
+
+  /* Paper cards */
+  .papers-grid { grid-template-columns: 1fr; }
+
+  /* CP problem cards */
+  .cp-problem-card { flex-wrap: wrap; gap: 8px; }
+  .cp-problem-card > div:last-child { width: 100%; justify-content: flex-start; }
+
+  /* Modal */
+  .modal { width: 95%; padding: 20px; border-radius: var(--radius-lg); }
+}
+
+/* ─── Small Phone (max 480px) ────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .main-content { padding: 10px 12px; padding-bottom: 80px; }
+
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+
+  .overview-ring { width: 90px; height: 90px; }
+  .overview-ring-value { font-size: 1.2rem; }
+  .overview-title { font-size: 1.4rem; }
+
+  .stat-value { font-size: 1.3rem; }
+  .card-body { padding: 12px; }
+  .card-header { padding: 12px 12px 10px; }
+
+  .phase-number { width: 24px; height: 24px; font-size: 0.65rem; }
+  .phase-title { font-size: 0.85rem; }
+
+  /* Daily: hide Day# column */
+  .daily-table .day-n { display: none; }
+  .daily-table th:nth-child(3) { display: none; }
+
+  /* Bottom nav labels shorter */
+  .bottom-nav-item { font-size: 0.6rem; min-width: 48px; }
 }
 
 /* ─── Print View (Daily Tracker) ─────────────────────────────────────────── */
 @media print {
   .app-header,
+  .bottom-nav,
   .roadmap-layout > *:first-child,
   .cp-layout > *:first-child,
   #tab-overview,
@@ -1260,3 +1431,4 @@ select.input option { background: #1a2235; }
   .habit-checkbox { border: 1px solid #999; }
   .habit-checkbox:checked { background: #333; }
 }
+

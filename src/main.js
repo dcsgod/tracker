@@ -12,6 +12,16 @@ import { renderCP } from './components/CPTab.js';
 import { renderDaily } from './components/DailyTrackerTab.js';
 import { renderSettings } from './components/SettingsPanel.js';
 
+// ─── Service Worker Registration ───────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/tracker/sw.js', { scope: '/tracker/' })
+      .then(reg => console.log('[SW] Registered, scope:', reg.scope))
+      .catch(err => console.warn('[SW] Registration failed:', err));
+  });
+}
+
+
 // ─── Global State ──────────────────────────────────────────────────────────
 
 let state = loadState();
@@ -100,15 +110,22 @@ function getTimeAgo(date) {
 // ─── Tab Routing ───────────────────────────────────────────────────────────
 
 const tabButtons = document.querySelectorAll('.nav-tab');
+const bnavButtons = document.querySelectorAll('.bottom-nav-item[data-tab]');
 const tabPanels = document.querySelectorAll('.tab-panel');
 
 function switchTab(tabId) {
   currentTab = tabId;
 
+  // Sync top nav
   tabButtons.forEach(btn => {
     const isActive = btn.dataset.tab === tabId;
     btn.classList.toggle('active', isActive);
     btn.setAttribute('aria-selected', isActive);
+  });
+
+  // Sync bottom nav
+  bnavButtons.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tabId);
   });
 
   tabPanels.forEach(panel => {
@@ -117,6 +134,8 @@ function switchTab(tabId) {
 
   // Re-render active tab to pick up state changes
   renderTab(tabId);
+  // Scroll to top on tab switch (mobile UX)
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function renderTab(tabId) {
@@ -138,6 +157,24 @@ function renderTab(tabId) {
 
 tabButtons.forEach(btn => {
   btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+});
+
+// Wire bottom nav tab buttons
+bnavButtons.forEach(btn => {
+  btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+});
+
+// Bottom nav settings button
+document.getElementById('bnav-settings')?.addEventListener('click', () => {
+  settingsOverlay.classList.add('open');
+  renderSettings(document.getElementById('settings-root'), state, (newState) => {
+    state = newState;
+    updateSyncStatus();
+    renderTab(currentTab);
+    showToast('Settings saved', 'success');
+  }, showToast, () => {
+    settingsOverlay.classList.remove('open');
+  });
 });
 
 // ─── Settings Modal ────────────────────────────────────────────────────────
@@ -163,6 +200,40 @@ settingsOverlay.addEventListener('click', (e) => {
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') settingsOverlay.classList.remove('open');
+});
+
+// ─── PWA Install Prompt ─────────────────────────────────────────────────────
+
+let _deferredInstallPrompt = null;
+const installBanner = document.getElementById('pwa-install-banner');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  _deferredInstallPrompt = e;
+  // Show install banner after 3 seconds
+  setTimeout(() => {
+    if (installBanner) installBanner.style.display = 'flex';
+  }, 3000);
+});
+
+document.getElementById('pwa-install-btn')?.addEventListener('click', async () => {
+  if (!_deferredInstallPrompt) return;
+  installBanner.style.display = 'none';
+  _deferredInstallPrompt.prompt();
+  const { outcome } = await _deferredInstallPrompt.userChoice;
+  console.log('[PWA] Install outcome:', outcome);
+  _deferredInstallPrompt = null;
+});
+
+document.getElementById('pwa-dismiss-btn')?.addEventListener('click', () => {
+  installBanner.style.display = 'none';
+  // Don't show again for this session
+  _deferredInstallPrompt = null;
+});
+
+window.addEventListener('appinstalled', () => {
+  showToast('App installed! 🎉 Open from your home screen', 'success', 5000);
+  installBanner.style.display = 'none';
 });
 
 // ─── Initial Load & Gist Sync ──────────────────────────────────────────────

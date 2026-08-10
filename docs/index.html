@@ -2,17 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Mastery Tracker — Ravi's CP & ML Progress Dashboard</title>
   <meta name="description" content="Personal progress tracker for CP/DSA (Codeforces 2100), ML/DL mastery, NLP, LLM, Time Series, RL, GNN, Diffusion Models, and daily habits — dcsgod." />
   <meta name="author" content="Ravi Kumar (dcsgod)" />
+
+  <!-- PWA / Installability -->
+  <link rel="manifest" href="/tracker/manifest.json" />
+  <meta name="theme-color" content="#4facfe" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Mastery Tracker" />
+  <link rel="apple-touch-icon" href="/tracker/icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/tracker/icons/icon-152.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/tracker/icons/icon-144.png" />
+  <link rel="apple-touch-icon" sizes="128x128" href="/tracker/icons/icon-128.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/tracker/icons/icon-96.png" />
+
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-TileColor" content="#0a0d14" />
+  <meta name="msapplication-TileImage" content="/tracker/icons/icon-144.png" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Mastery Tracker — CP & ML Progress" />
   <meta property="og:description" content="Daily habits, Codeforces problem tracker, and ML/DL roadmap progress — all in one dashboard." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dcsgod.github.io/tracker/" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script type="module" crossorigin src="/tracker/assets/index-CShDD9wp.js"></script>
-  <link rel="stylesheet" crossorigin href="/tracker/assets/index-ZCAtEQ70.css">
+  <script type="module" crossorigin src="/tracker/assets/index-DJpkkhTE.js"></script>
+  <link rel="stylesheet" crossorigin href="/tracker/assets/index-DE6-8ogb.css">
 </head>
 <body>
   <div id="app">
@@ -82,6 +103,43 @@
 
     <!-- Toast Container -->
     <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Bottom Navigation (mobile only — shown via CSS on ≤767px) -->
+    <nav class="bottom-nav" role="navigation" aria-label="Main navigation">
+      <button class="bottom-nav-item active" data-tab="overview" id="bnav-overview">
+        <span class="bnav-icon">📊</span>
+        <span>Overview</span>
+      </button>
+      <button class="bottom-nav-item" data-tab="roadmaps" id="bnav-roadmaps">
+        <span class="bnav-icon">🗺️</span>
+        <span>Roadmaps</span>
+      </button>
+      <button class="bottom-nav-item" data-tab="cp" id="bnav-cp">
+        <span class="bnav-icon">⚡</span>
+        <span>CP/DSA</span>
+      </button>
+      <button class="bottom-nav-item" data-tab="daily" id="bnav-daily">
+        <span class="bnav-icon">📅</span>
+        <span>Daily</span>
+      </button>
+      <button class="bottom-nav-item" id="bnav-settings" data-action="settings">
+        <span class="bnav-icon">⚙️</span>
+        <span>Settings</span>
+      </button>
+    </nav>
+
+    <!-- PWA Install Banner (shown only when installable) -->
+    <div id="pwa-install-banner" style="display:none; position:fixed; bottom:70px; left:50%; transform:translateX(-50%); z-index:150; background:linear-gradient(135deg,#0d1b2a,#1a3a5c); border:1px solid rgba(79,172,254,0.3); border-radius:14px; padding:14px 20px; display:flex; align-items:center; gap:14px; box-shadow:0 8px 32px rgba(0,0,0,0.5); max-width:340px; width:90%;">
+      <span style="font-size:2rem">🎯</span>
+      <div style="flex:1">
+        <div style="font-weight:600; font-size:0.875rem; color:#f0f6fc">Install Mastery Tracker</div>
+        <div style="font-size:0.75rem; color:#8b949e; margin-top:2px">Add to home screen for quick access</div>
+      </div>
+      <div style="display:flex; gap:6px; flex-shrink:0">
+        <button id="pwa-install-btn" style="background:linear-gradient(135deg,#4facfe,#a78bfa); color:#fff; border:none; padding:7px 14px; border-radius:8px; font-size:0.8rem; font-weight:600; cursor:pointer;">Install</button>
+        <button id="pwa-dismiss-btn" style="background:transparent; border:1px solid rgba(255,255,255,0.1); color:#8b949e; padding:7px 10px; border-radius:8px; font-size:0.8rem; cursor:pointer;">✕</button>
+      </div>
+    </div>
   </div>
 
 </body>
