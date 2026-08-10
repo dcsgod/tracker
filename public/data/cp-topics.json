@@ -1,0 +1,182 @@
+[
+  {
+    "id": "arrays-prefix-sums",
+    "title": "Arrays & Prefix Sums",
+    "tags": ["arrays", "implementation"],
+    "ratingStart": 800
+  },
+  {
+    "id": "two-pointers-sliding-window",
+    "title": "Two Pointers & Sliding Window",
+    "tags": ["two pointers"],
+    "ratingStart": 900
+  },
+  {
+    "id": "sorting-searching",
+    "title": "Sorting & Searching (incl. Binary Search on Answer)",
+    "tags": ["binary search", "sortings"],
+    "ratingStart": 900
+  },
+  {
+    "id": "strings-hashing",
+    "title": "Strings & Hashing",
+    "tags": ["strings", "hashing"],
+    "ratingStart": 900
+  },
+  {
+    "id": "recursion-backtracking",
+    "title": "Recursion & Backtracking",
+    "tags": ["brute force", "dfs and similar"],
+    "ratingStart": 1000
+  },
+  {
+    "id": "basic-math-number-theory",
+    "title": "Basic Math & Number Theory (GCD, sieve, modular arithmetic)",
+    "tags": ["math", "number theory"],
+    "ratingStart": 800
+  },
+  {
+    "id": "greedy",
+    "title": "Greedy",
+    "tags": ["greedy"],
+    "ratingStart": 900
+  },
+  {
+    "id": "bitmasking",
+    "title": "Bitmasking",
+    "tags": ["bitmasks"],
+    "ratingStart": 1100
+  },
+  {
+    "id": "stacks-queues-deques",
+    "title": "Stacks / Queues / Deques",
+    "tags": ["data structures"],
+    "ratingStart": 1000
+  },
+  {
+    "id": "linked-lists",
+    "title": "Linked Lists",
+    "tags": ["data structures"],
+    "ratingStart": 900
+  },
+  {
+    "id": "trees-dfs-bfs",
+    "title": "Trees (DFS/BFS, LCA, Euler tour)",
+    "tags": ["trees", "dfs and similar"],
+    "ratingStart": 1100
+  },
+  {
+    "id": "bst-balanced-bst",
+    "title": "Binary Search Trees & Balanced BSTs",
+    "tags": ["trees", "data structures"],
+    "ratingStart": 1300
+  },
+  {
+    "id": "heaps-priority-queues",
+    "title": "Heaps / Priority Queues",
+    "tags": ["data structures"],
+    "ratingStart": 1200
+  },
+  {
+    "id": "graphs-traversal",
+    "title": "Graphs — Traversal (DFS/BFS, connected components)",
+    "tags": ["graphs", "dfs and similar"],
+    "ratingStart": 1100
+  },
+  {
+    "id": "graphs-shortest-paths",
+    "title": "Graphs — Shortest Paths (Dijkstra, Bellman-Ford, Floyd-Warshall)",
+    "tags": ["graphs", "shortest paths"],
+    "ratingStart": 1400
+  },
+  {
+    "id": "graphs-mst",
+    "title": "Graphs — MST (Kruskal, Prim)",
+    "tags": ["graphs", "greedy"],
+    "ratingStart": 1400
+  },
+  {
+    "id": "graphs-advanced",
+    "title": "Graphs — Advanced (topological sort, SCC/Tarjan, bridges/articulation points)",
+    "tags": ["graphs", "dfs and similar"],
+    "ratingStart": 1600
+  },
+  {
+    "id": "union-find-dsu",
+    "title": "Union-Find / DSU",
+    "tags": ["dsu"],
+    "ratingStart": 1200
+  },
+  {
+    "id": "dp-1d-2d",
+    "title": "Dynamic Programming — 1D/2D",
+    "tags": ["dp"],
+    "ratingStart": 1200
+  },
+  {
+    "id": "dp-trees-graphs",
+    "title": "Dynamic Programming — on Trees & Graphs",
+    "tags": ["dp", "trees"],
+    "ratingStart": 1600
+  },
+  {
+    "id": "dp-bitmask-digit",
+    "title": "Dynamic Programming — Bitmask & Digit DP",
+    "tags": ["dp", "bitmasks"],
+    "ratingStart": 1700
+  },
+  {
+    "id": "combinatorics-probability",
+    "title": "Combinatorics & Probability",
+    "tags": ["combinatorics", "probabilities"],
+    "ratingStart": 1400
+  },
+  {
+    "id": "segment-trees-fenwick",
+    "title": "Segment Trees & Fenwick (BIT)",
+    "tags": ["data structures"],
+    "ratingStart": 1600
+  },
+  {
+    "id": "sparse-tables-rmq",
+    "title": "Sparse Tables & RMQ",
+    "tags": ["data structures"],
+    "ratingStart": 1700
+  },
+  {
+    "id": "trie",
+    "title": "Trie",
+    "tags": ["string suffix structures"],
+    "ratingStart": 1500
+  },
+  {
+    "id": "string-algorithms",
+    "title": "String Algorithms (KMP, Z-function, Manacher, suffix arrays)",
+    "tags": ["strings", "string suffix structures"],
+    "ratingStart": 1700
+  },
+  {
+    "id": "number-theory-advanced",
+    "title": "Number Theory — Advanced (CRT, Euler's totient, modular inverse)",
+    "tags": ["number theory"],
+    "ratingStart": 1700
+  },
+  {
+    "id": "game-theory",
+    "title": "Game Theory (Nim, Sprague-Grundy)",
+    "tags": ["games"],
+    "ratingStart": 1700
+  },
+  {
+    "id": "geometry-basics",
+    "title": "Geometry Basics",
+    "tags": ["geometry"],
+    "ratingStart": 1600
+  },
+  {
+    "id": "divide-conquer",
+    "title": "Divide & Conquer",
+    "tags": ["divide and conquer"],
+    "ratingStart": 1500
+  }
+]

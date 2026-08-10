@@ -1,0 +1,68 @@
+{
+  "id": "quantpath",
+  "title": "Quant Researcher & Algo Designer",
+  "sourceUrl": "https://dcsgod.github.io/quantpath/",
+  "coverage": "partial",
+  "phases": [
+    { "id": "q-01", "title": "Mathematical Foundations", "priority": "must", "stretch": false, "topics": [
+      { "id": "q-01-real-analysis", "title": "Real Analysis — Measure Theory, Functional Analysis", "papers": [] },
+      { "id": "q-01-linear-algebra", "title": "Linear Algebra for Quant", "papers": [] },
+      { "id": "q-01-optimization", "title": "Optimization — Convex, Non-convex, Integer Programming", "papers": [] }
+    ]},
+    { "id": "q-02", "title": "Probability Theory", "priority": "must", "stretch": false, "topics": [
+      { "id": "q-02-prob", "title": "Advanced Probability — Martingales, Stopping Times", "papers": [] },
+      { "id": "q-02-stats", "title": "Mathematical Statistics — Sufficient Statistics, Hypothesis Testing", "papers": [] }
+    ]},
+    { "id": "q-03", "title": "Stochastic Calculus", "priority": "must", "stretch": false, "topics": [
+      { "id": "q-03-ito", "title": "Itô Calculus — BM, SDEs, Itô's Lemma", "papers": [] },
+      { "id": "q-03-girs", "title": "Girsanov's Theorem & Change of Measure", "papers": [] },
+      { "id": "q-03-options", "title": "Options Pricing — Black-Scholes, Local/Stochastic Vol", "papers": ["Black & Scholes - The Pricing of Options (1973)"] }
+    ]},
+    { "id": "q-04", "title": "Programming & DSA", "priority": "must", "stretch": false, "topics": [
+      { "id": "q-04-python", "title": "Python — NumPy, Pandas, Numba, Cython", "papers": [] },
+      { "id": "q-04-cpp", "title": "C++ for Low-Latency — Memory Management, SIMD", "papers": [] },
+      { "id": "q-04-dsa", "title": "Algorithms & Data Structures for Quant", "papers": [] }
+    ]},
+    { "id": "q-05", "title": "Competitive Programming", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "q-05-cp", "title": "CP — Problem Solving, Codeforces, Olympiad Techniques", "papers": [] }
+    ]},
+    { "id": "q-06", "title": "Statistics & Econometrics", "priority": "must", "stretch": false, "topics": [
+      { "id": "q-06-time-series", "title": "Time Series Econometrics — ARIMA, GARCH, Cointegration", "papers": [] },
+      { "id": "q-06-regression", "title": "Regression Analysis — OLS, GLS, Panel Data", "papers": [] },
+      { "id": "q-06-causal", "title": "Causal Inference for Finance", "papers": [] }
+    ]},
+    { "id": "q-07", "title": "ML for Quant", "priority": "must", "stretch": false, "topics": [
+      { "id": "q-07-supervised", "title": "Supervised ML for Alpha — Feature Engineering, Overfitting", "papers": [] },
+      { "id": "q-07-nlp-quant", "title": "NLP for Quant — Sentiment, Earnings Calls, News Alpha", "papers": [] },
+      { "id": "q-07-rl-trading", "title": "RL for Trading — Multi-period Optimization", "papers": [] }
+    ]},
+    { "id": "q-08", "title": "Market Microstructure", "priority": "must", "stretch": false, "topics": [
+      { "id": "q-08-lob", "title": "Limit Order Book — Depth, Spread, Queue Priority", "papers": ["Gould et al. - Limit Order Books (2013)"] },
+      { "id": "q-08-impact", "title": "Market Impact Models — Almgren-Chriss, Amihud", "papers": [] },
+      { "id": "q-08-adverse-selection", "title": "Adverse Selection — Kyle Model, Glosten-Milgrom", "papers": [] }
+    ]},
+    { "id": "q-09", "title": "Portfolio & Risk", "priority": "must", "stretch": false, "topics": [
+      { "id": "q-09-mvo", "title": "Mean-Variance Optimization — Markowitz, Black-Litterman", "papers": ["Markowitz - Portfolio Selection (1952)"] },
+      { "id": "q-09-factor", "title": "Factor Models — CAPM, Fama-French, Barra", "papers": ["Fama & French - Common Risk Factors (1993)"] },
+      { "id": "q-09-risk", "title": "Risk Measures — VaR, CVaR, Drawdown, Kelly Criterion", "papers": [] }
+    ]},
+    { "id": "q-10", "title": "Strategy Design", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "q-10-momentum", "title": "Momentum & Mean Reversion Strategies", "papers": [] },
+      { "id": "q-10-stat-arb", "title": "Statistical Arbitrage — Pairs Trading, Cointegration Trades", "papers": [] },
+      { "id": "q-10-ml-alpha", "title": "ML Alpha — Feature Importance, Walk-Forward Validation", "papers": [] }
+    ]},
+    { "id": "q-11", "title": "Trading Infrastructure", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "q-11-backtesting", "title": "Backtesting — Vectorbt, Zipline, QuantConnect", "papers": [] },
+      { "id": "q-11-execution", "title": "Execution Systems — FIX Protocol, Low Latency", "papers": [] }
+    ]},
+    { "id": "q-12", "title": "Execution Algorithms", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "q-12-twap-vwap", "title": "TWAP/VWAP — Optimal Execution Schedules", "papers": [] },
+      { "id": "q-12-almgren-chriss", "title": "Almgren-Chriss Optimal Execution", "papers": ["Almgren & Chriss - Optimal Execution of Portfolio Transactions (2000)"] }
+    ]},
+    { "id": "q-13", "title": "Interview Prep", "priority": "must", "stretch": false, "topics": [
+      { "id": "q-13-brainteasers", "title": "Brainteasers & Probability Puzzles", "papers": [] },
+      { "id": "q-13-coding", "title": "Coding Interviews — LC Hard, Algo for Quant", "papers": [] },
+      { "id": "q-13-case-studies", "title": "Case Studies — Options Pricing, Strategy P&L Attribution", "papers": [] }
+    ]}
+  ]
+}

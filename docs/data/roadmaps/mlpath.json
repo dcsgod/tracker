@@ -1,0 +1,112 @@
+{
+  "id": "mlpath",
+  "title": "ML/DL Mastery Roadmap",
+  "sourceUrl": "https://dcsgod.github.io/mlpath/",
+  "coverage": "full",
+  "phases": [
+    {
+      "id": "phase-01",
+      "title": "Mathematical Foundations",
+      "priority": "must",
+      "topics": [
+        { "id": "linear-algebra", "title": "Linear Algebra — Vector Spaces & Matrices", "papers": ["Strang - Introduction to Linear Algebra (Ch 1-4)", "Horn & Johnson - Matrix Analysis Ch1"] },
+        { "id": "multivariate-calculus", "title": "Multivariate Calculus — Optimization Foundations", "papers": ["Nocedal & Wright - Numerical Optimization Ch1-2"] },
+        { "id": "probability-theory", "title": "Probability Theory — Distributions, Expectation, Convergence", "papers": ["Blitzstein & Hwang - Introduction to Probability Ch1-4"] },
+        { "id": "information-theory", "title": "Information Theory — Entropy, KL Divergence, Mutual Information", "papers": ["Cover & Thomas - Elements of Information Theory Ch1-2", "Shannon - A Mathematical Theory of Communication (1948)"] },
+        { "id": "optimization-foundations", "title": "Optimization — Convex Sets, Duality, First/Second-Order Methods", "papers": ["Boyd & Vandenberghe - Convex Optimization Ch1-5"] }
+      ]
+    },
+    {
+      "id": "phase-02",
+      "title": "Statistics & Probabilistic Modeling",
+      "priority": "must",
+      "topics": [
+        { "id": "frequentist-stats", "title": "Frequentist Statistics — MLE, Hypothesis Testing, Confidence Intervals", "papers": ["Casella & Berger - Statistical Inference Ch7-8"] },
+        { "id": "bayesian-inference", "title": "Bayesian Inference — Priors, Posteriors, MAP", "papers": ["MacKay - Information Theory, Inference, and Learning Algorithms Ch2-3", "Gelman et al. - Bayesian Data Analysis Ch1"] },
+        { "id": "glms", "title": "Generalized Linear Models", "papers": [] },
+        { "id": "mcmc", "title": "MCMC — Metropolis-Hastings, Gibbs Sampling, HMC", "papers": ["Neal - MCMC using Hamiltonian Dynamics (2011)"] },
+        { "id": "pgms", "title": "Probabilistic Graphical Models — Bayes Nets, MRFs", "papers": ["Koller & Friedman - PGM Ch1-3 (selected)"] },
+        { "id": "gaussian-processes", "title": "Gaussian Processes", "papers": ["Rasmussen & Williams - Gaussian Processes for ML Ch1-3"] },
+        { "id": "causal-inference", "title": "Causal Inference — Rubin Potential Outcomes, SCMs", "papers": ["Pearl - Causality (2nd ed.) Ch1-2", "Imbens & Rubin - Causal Inference Ch1"] },
+        { "id": "time-series-basics", "title": "Time Series Basics — ARIMA, ACF/PACF, Stationarity", "papers": [] }
+      ]
+    },
+    {
+      "id": "phase-03",
+      "title": "Classical Machine Learning",
+      "priority": "must",
+      "topics": [
+        { "id": "linear-models", "title": "Linear & Logistic Regression — Regularization (Ridge, Lasso, Elastic Net)", "papers": ["Tibshirani - Regression Shrinkage and Selection via the Lasso (1996)"] },
+        { "id": "svms", "title": "Support Vector Machines & Kernels", "papers": ["Cortes & Vapnik - Support-Vector Networks (1995)", "Schölkopf & Smola - Learning with Kernels Ch1-2"] },
+        { "id": "ensembles", "title": "Ensemble Methods — Bagging, Boosting, Random Forests, Gradient Boosting", "papers": ["Freund & Schapire - A Decision-Theoretic Generalization of On-Line Learning (AdaBoost 1997)", "Chen & Guestrin - XGBoost (2016)"] },
+        { "id": "clustering", "title": "Clustering — K-Means, GMM, DBSCAN, Hierarchical", "papers": [] },
+        { "id": "dim-reduction", "title": "Dimensionality Reduction — PCA, ICA, t-SNE, UMAP", "papers": ["McInnes et al. - UMAP (2018)", "van der Maaten & Hinton - Visualizing Data with t-SNE (2008)"] },
+        { "id": "learning-theory", "title": "Learning Theory — VC Dimension, PAC Learning, Bias-Variance", "papers": ["Shalev-Shwartz & Ben-David - Understanding Machine Learning Ch2-6"] },
+        { "id": "anomaly-detection", "title": "Anomaly Detection — Isolation Forest, One-Class SVM, LOF", "papers": ["Liu et al. - Isolation Forest (2008)"] },
+        { "id": "feature-engineering", "title": "Feature Engineering & Selection", "papers": [] },
+        { "id": "optimization-ml", "title": "Optimization for ML — SGD, Adam, Learning Rate Schedules", "papers": ["Kingma & Ba - Adam (2014)", "Bottou - Large-Scale Machine Learning with SGD (2010)"] }
+      ]
+    },
+    {
+      "id": "phase-04",
+      "title": "Deep Learning & Neural Architectures",
+      "priority": "must",
+      "topics": [
+        { "id": "nn-fundamentals", "title": "NN Fundamentals — Backprop, Activations, Initialization", "papers": ["LeCun et al. - Efficient BackProp (1998)", "He et al. - Deep Residual Learning (ResNet 2015)"] },
+        { "id": "cnns", "title": "Convolutional Neural Networks — AlexNet → ResNet → EfficientNet", "papers": ["Krizhevsky et al. - AlexNet (2012)", "He et al. - ResNet (2016)"] },
+        { "id": "rnns", "title": "RNNs, LSTMs, GRUs — Sequence Modeling", "papers": ["Hochreiter & Schmidhuber - LSTM (1997)", "Cho et al. - GRU (2014)"] },
+        { "id": "transformers", "title": "Transformers — Attention, Multi-Head, Positional Encoding", "papers": ["Vaswani et al. - Attention Is All You Need (2017)", "Devlin et al. - BERT (2018)"] },
+        { "id": "generative-models", "title": "Generative Models — VAEs, GANs, Normalizing Flows", "papers": ["Kingma & Welling - VAE (2013)", "Goodfellow et al. - GAN (2014)"] },
+        { "id": "regularization", "title": "Regularization — Dropout, BatchNorm, Weight Decay, Data Augmentation", "papers": ["Srivastava et al. - Dropout (2014)", "Ioffe & Szegedy - Batch Normalization (2015)"] },
+        { "id": "large-scale-training", "title": "Large-Scale Training — Mixed Precision, Gradient Checkpointing, Distributed", "papers": ["Rajbhandari et al. - ZeRO (2020)"] },
+        { "id": "gnns-intro", "title": "Graph Neural Networks — Message Passing, GCN, GraphSAGE, GAT", "papers": ["Kipf & Welling - Semi-Supervised Classification with GCNs (2016)", "Velickovic et al. - Graph Attention Networks (2017)"] },
+        { "id": "self-supervised", "title": "Self-Supervised Learning — Contrastive, BYOL, MAE", "papers": ["He et al. - Masked Autoencoders (MAE 2021)", "Chen et al. - SimCLR (2020)"] }
+      ]
+    },
+    {
+      "id": "phase-05",
+      "title": "Computer Vision",
+      "priority": "must",
+      "topics": [
+        { "id": "classical-cv", "title": "Classical CV — Filters, Edge Detection, SIFT, HOG", "papers": [] },
+        { "id": "detection", "title": "Object Detection — YOLO, Faster R-CNN, DETR", "papers": ["Ren et al. - Faster R-CNN (2015)", "Carion et al. - DETR (2020)"] },
+        { "id": "segmentation", "title": "Segmentation — Mask R-CNN, DeepLab, SAM", "papers": ["He et al. - Mask R-CNN (2017)", "Kirillov et al. - SAM (2023)"] },
+        { "id": "3d-vision", "title": "3D Vision — NeRF, Point Clouds, Depth Estimation", "papers": ["Mildenhall et al. - NeRF (2020)"] },
+        { "id": "generative-vision", "title": "Generative Vision — Stable Diffusion, DALL-E", "papers": ["Rombach et al. - Stable Diffusion/LDM (2022)"] },
+        { "id": "multimodal-cv", "title": "Multimodal — CLIP, ALIGN, Flamingo", "papers": ["Radford et al. - CLIP (2021)"] },
+        { "id": "video-understanding", "title": "Video Understanding — SlowFast, VideoMAE, Sora", "papers": ["Feichtenhofer et al. - SlowFast Networks (2018)"] },
+        { "id": "vision-transformers", "title": "Vision Transformers — ViT, DeiT, Swin", "papers": ["Dosovitskiy et al. - ViT (2020)", "Liu et al. - Swin Transformer (2021)"] }
+      ]
+    },
+    {
+      "id": "phase-06",
+      "title": "Advanced ML & Systems",
+      "priority": "must",
+      "topics": [
+        { "id": "reinforcement-learning", "title": "Reinforcement Learning — MDPs, Q-Learning, Policy Gradient, PPO, SAC", "papers": ["Sutton & Barto - RL: An Introduction Ch1-6", "Schulman et al. - PPO (2017)"] },
+        { "id": "meta-learning", "title": "Meta-Learning — MAML, Prototypical Networks, In-Context Learning", "papers": ["Finn et al. - MAML (2017)"] },
+        { "id": "interpretability", "title": "Interpretability — SHAP, LIME, Integrated Gradients, Probing", "papers": ["Lundberg & Lee - SHAP (2017)", "Ribeiro et al. - LIME (2016)"] },
+        { "id": "adversarial-robustness", "title": "Adversarial Robustness — FGSM, PGD, Certified Defenses", "papers": ["Goodfellow et al. - Explaining and Harnessing Adversarial Examples (2014)", "Madry et al. - PGD Adversarial Training (2017)"] },
+        { "id": "ml-systems", "title": "ML Systems & Infra — MLflow, Ray, Triton, vLLM, PagedAttention", "papers": ["Kwon et al. - vLLM/PagedAttention (2023)"] },
+        { "id": "bayesian-dl", "title": "Bayesian Deep Learning — MC Dropout, Laplace, Deep Ensembles", "papers": ["Lakshminarayanan et al. - Deep Ensembles (2017)"] },
+        { "id": "continual-learning", "title": "Continual Learning — Catastrophic Forgetting, EWC, Replay", "papers": ["Kirkpatrick et al. - EWC (2017)"] },
+        { "id": "fairness-ml", "title": "Fairness & Ethics in ML — Calibration, Group Fairness, Auditing", "papers": ["Hardt et al. - Equality of Opportunity in Supervised Learning (2016)"] }
+      ]
+    },
+    {
+      "id": "phase-07",
+      "title": "Research Frontier",
+      "priority": "must",
+      "topics": [
+        { "id": "llm-architecture", "title": "LLM Architecture — GPT-4, Llama 3, Mamba, Mixture of Experts", "papers": ["Jiang et al. - Mixtral of Experts (2024)", "Gu & Dao - Mamba (2023)"] },
+        { "id": "rlhf-alignment", "title": "RLHF & Alignment — InstructGPT, DPO, Constitutional AI", "papers": ["Ouyang et al. - InstructGPT (2022)", "Rafailov et al. - DPO (2023)"] },
+        { "id": "mechanistic-interpretability", "title": "Mechanistic Interpretability — Circuits, Superposition, Sparse Autoencoders", "papers": ["Elhage et al. - A Mathematical Framework for Transformer Circuits (2021)", "Templeton et al. - Scaling Monosemanticity (2024)"] },
+        { "id": "scaling-laws", "title": "Scaling Laws — Chinchilla, Emergent Abilities, Compute-Optimal", "papers": ["Kaplan et al. - Scaling Laws for NLMs (2020)", "Hoffmann et al. - Chinchilla (2022)"] },
+        { "id": "reasoning-agents", "title": "Reasoning & Agents — CoT, o1, DeepSeek-R1, ReAct, Tool Use", "papers": ["Wei et al. - Chain-of-Thought Prompting (2022)", "Guo et al. - DeepSeek-R1 (2025)"] },
+        { "id": "multimodal-frontier", "title": "Multimodal Frontier — GPT-4V, Gemini, Claude 3", "papers": ["Team Gemini - Gemini: A Family of Highly Capable Multimodal Models (2023)"] },
+        { "id": "anthropic-checklist", "title": "Anthropic Hiring Bar Checklist", "papers": ["Askell et al. - Constitutional AI (2022)", "Bai et al. - Training a Helpful and Harmless Assistant (2022)"] },
+        { "id": "research-process", "title": "Research Process — Reading Papers, Reproducing Results, Writing", "papers": ["Karpathy - A Recipe for Training Neural Networks (2019)"] }
+      ]
+    }
+  ]
+}

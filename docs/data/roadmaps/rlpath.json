@@ -1,0 +1,47 @@
+{
+  "id": "rlpath",
+  "title": "Reinforcement Learning Path",
+  "sourceUrl": "https://dcsgod.github.io/rlpath/",
+  "coverage": "partial",
+  "stub": true,
+  "stubNote": "This site had dynamic content not fetchable at build time. Seeded from RL section inside mlpath. Visit the live site and expand topics below.",
+  "phases": [
+    { "id": "rl-01", "title": "RL Foundations", "priority": "must", "stretch": false, "topics": [
+      { "id": "rl-01-mdp", "title": "MDPs — States, Actions, Rewards, Transitions, Discount Factor", "papers": [] },
+      { "id": "rl-01-bellman", "title": "Bellman Equations — Value Function, Q-function, Optimality", "papers": [] },
+      { "id": "rl-01-dp", "title": "Dynamic Programming — Policy Iteration, Value Iteration", "papers": [] }
+    ]},
+    { "id": "rl-02", "title": "Temporal Difference Learning", "priority": "must", "stretch": false, "topics": [
+      { "id": "rl-02-td", "title": "TD Learning — TD(0), n-step TD, TD(λ)", "papers": [] },
+      { "id": "rl-02-sarsa", "title": "SARSA — On-Policy TD Control", "papers": [] },
+      { "id": "rl-02-qlearning", "title": "Q-Learning — Off-Policy TD, Tabular", "papers": ["Watkins & Dayan - Q-Learning (1992)"] }
+    ]},
+    { "id": "rl-03", "title": "Deep RL — Value-Based", "priority": "must", "stretch": false, "topics": [
+      { "id": "rl-03-dqn", "title": "DQN — Deep Q-Network, Experience Replay, Target Network", "papers": ["Mnih et al. - DQN (2015)"] },
+      { "id": "rl-03-dqn-variants", "title": "DQN Variants — Double DQN, Dueling DQN, PER, Rainbow", "papers": ["Hessel et al. - Rainbow (2017)"] },
+      { "id": "rl-03-distributional", "title": "Distributional RL — C51, QR-DQN, IQN", "papers": [] }
+    ]},
+    { "id": "rl-04", "title": "Policy Gradient Methods", "priority": "must", "stretch": false, "topics": [
+      { "id": "rl-04-reinforce", "title": "REINFORCE — Monte Carlo Policy Gradient, Baseline", "papers": [] },
+      { "id": "rl-04-actor-critic", "title": "Actor-Critic — A2C, A3C, GAE", "papers": ["Schulman et al. - GAE (2015)"] },
+      { "id": "rl-04-ppo", "title": "PPO — Proximal Policy Optimization, Clipped Objective", "papers": ["Schulman et al. - PPO (2017)"] },
+      { "id": "rl-04-trpo", "title": "TRPO — Trust Region Policy Optimization", "papers": ["Schulman et al. - TRPO (2015)"] }
+    ]},
+    { "id": "rl-05", "title": "Continuous Control", "priority": "must", "stretch": false, "topics": [
+      { "id": "rl-05-ddpg", "title": "DDPG — Deep Deterministic Policy Gradient", "papers": ["Lillicrap et al. - DDPG (2015)"] },
+      { "id": "rl-05-sac", "title": "SAC — Soft Actor-Critic, Entropy Regularization", "papers": ["Haarnoja et al. - SAC (2018)"] },
+      { "id": "rl-05-td3", "title": "TD3 — Twin Delayed DDPG", "papers": ["Fujimoto et al. - TD3 (2018)"] }
+    ]},
+    { "id": "rl-06", "title": "Model-Based RL", "priority": "must", "stretch": false, "topics": [
+      { "id": "rl-06-world-models", "title": "World Models — Dreamer, RSSM, Latent Imagination", "papers": ["Hafner et al. - DreamerV2 (2020)"] },
+      { "id": "rl-06-muzero", "title": "AlphaZero & MuZero — MCTS, Self-Play, Planning", "papers": ["Silver et al. - AlphaZero (2018)", "Schrittwieser et al. - MuZero (2020)"] },
+      { "id": "rl-06-mbpo", "title": "MBPO — Model-Based Policy Optimization", "papers": [] }
+    ]},
+    { "id": "rl-07", "title": "Advanced RL Topics", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "rl-07-offline-rl", "title": "Offline RL — CQL, IQL, Decision Transformer", "papers": ["Chen et al. - Decision Transformer (2021)"] },
+      { "id": "rl-07-multi-agent", "title": "Multi-Agent RL — CTDE, MADDPG, QMIX", "papers": [] },
+      { "id": "rl-07-hierarchical", "title": "Hierarchical RL — Options Framework, HRL", "papers": [] },
+      { "id": "rl-07-safety", "title": "Safe RL — Constrained MDPs, CMDP, Lagrangian Methods", "papers": [] }
+    ]}
+  ]
+}

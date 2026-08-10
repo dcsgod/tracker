@@ -1,0 +1,49 @@
+{
+  "id": "diffusionmodelspath",
+  "title": "Diffusion Models Path",
+  "sourceUrl": "https://dcsgod.github.io/diffusionmodelspath/",
+  "coverage": "partial",
+  "phases": [
+    { "id": "diff-01", "title": "Prerequisites", "priority": "must", "stretch": false, "topics": [
+      { "id": "diff-01-probability", "title": "Probability — Score Functions, Exponential Families, Fisher Information", "papers": [] },
+      { "id": "diff-01-vaes", "title": "VAEs — ELBO, Reparameterization, β-VAE", "papers": ["Kingma & Welling - VAE (2013)"] },
+      { "id": "diff-01-sdes", "title": "Stochastic Differential Equations — Itô SDEs, Fokker-Planck", "papers": [] },
+      { "id": "diff-01-ebms", "title": "Energy-Based Models — Contrastive Divergence, MCMC Sampling", "papers": [] }
+    ]},
+    { "id": "diff-02", "title": "Score Matching & Denoising Score Matching", "priority": "must", "stretch": false, "topics": [
+      { "id": "diff-02-score-matching", "title": "Score Matching — Hyvärinen Score Matching (2005)", "papers": ["Hyvärinen - Estimation of Non-Normalized Statistical Models (2005)"] },
+      { "id": "diff-02-dsm", "title": "Denoising Score Matching — DSM, Noise Conditioning", "papers": ["Vincent - A Connection Between Score Matching and Denoising Autoencoders (2011)"] },
+      { "id": "diff-02-ncsn", "title": "NCSN — Noise Conditional Score Networks", "papers": ["Song & Ermon - NCSN (2019)"] },
+      { "id": "diff-02-langevin", "title": "Langevin Dynamics — Sampling via Score Functions", "papers": [] }
+    ]},
+    { "id": "diff-03", "title": "DDPM/DDIM & Diffusion Framework", "priority": "must", "stretch": false, "topics": [
+      { "id": "diff-03-ddpm", "title": "DDPM — Forward/Reverse Process, Noise Schedule, ε-Prediction", "papers": ["Ho et al. - DDPM (2020)"] },
+      { "id": "diff-03-ddim", "title": "DDIM — Deterministic Sampling, ODE Solver, Fewer Steps", "papers": ["Song et al. - DDIM (2020)"] },
+      { "id": "diff-03-sde-unification", "title": "SDE Framework — Song et al. Unified SDE View", "papers": ["Song et al. - Score-Based Generative Modeling through SDEs (2020)"] },
+      { "id": "diff-03-classifier-guidance", "title": "Classifier & Classifier-Free Guidance (CFG)", "papers": ["Ho & Salimans - CFG (2022)"] }
+    ]},
+    { "id": "diff-04", "title": "Latent Diffusion & Text-to-Image", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "diff-04-ldm", "title": "Latent Diffusion Models (LDM) & Stable Diffusion", "papers": ["Rombach et al. - LDM/Stable Diffusion (2022)"] },
+      { "id": "diff-04-dalle2", "title": "DALL-E 2, Imagen — T5/CLIP Conditioning", "papers": ["Ramesh et al. - DALL-E 2 (2022)"] },
+      { "id": "diff-04-personalization", "title": "Personalization — DreamBooth, LoRA, Textual Inversion", "papers": ["Ruiz et al. - DreamBooth (2022)"] },
+      { "id": "diff-04-controlnet", "title": "ControlNet — Conditioning on Pose, Depth, Canny", "papers": ["Zhang et al. - ControlNet (2023)"] }
+    ]},
+    { "id": "diff-05", "title": "Architectures", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "diff-05-unet", "title": "U-Net — Skip Connections, Residual Blocks for Diffusion", "papers": [] },
+      { "id": "diff-05-dit", "title": "DiT — Diffusion Transformers, Scalable Architecture", "papers": ["Peebles & Xie - DiT (2022)"] },
+      { "id": "diff-05-flux", "title": "FLUX — Flow Matching + DiT", "papers": [] },
+      { "id": "diff-05-consistency", "title": "Consistency Models & LCM — Few-Step Generation", "papers": ["Song et al. - Consistency Models (2023)"] }
+    ]},
+    { "id": "diff-06", "title": "Applications", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "diff-06-video", "title": "Video Diffusion — Sora, Stable Video Diffusion", "papers": [] },
+      { "id": "diff-06-audio", "title": "Audio Diffusion — WaveGrad, AudioLDM, Stable Audio", "papers": [] },
+      { "id": "diff-06-3d", "title": "3D & Molecular Generation — PointDiffusion, DiffDock", "papers": [] },
+      { "id": "diff-06-scientific", "title": "Scientific Imaging — Inverse Problems, MRI Reconstruction", "papers": [] }
+    ]},
+    { "id": "diff-07", "title": "Frontier", "priority": "stretch", "stretch": true, "topics": [
+      { "id": "diff-07-flow-matching", "title": "Flow Matching & Rectified Flow — Faster Training", "papers": ["Lipman et al. - Flow Matching (2022)", "Liu et al. - Rectified Flow (2022)"] },
+      { "id": "diff-07-stochastic-interpolants", "title": "Stochastic Interpolants — Albergo & Vanden-Eijnden", "papers": [] },
+      { "id": "diff-07-world-models", "title": "Diffusion as World Models — DIAMOND, RoboDreamer", "papers": [] }
+    ]}
+  ]
+}

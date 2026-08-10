@@ -1,0 +1,46 @@
+{
+  "id": "llmreasoning",
+  "title": "LLM Building, Reasoning Models & Fine-Tuning",
+  "sourceUrl": "https://dcsgod.github.io/llmreasoning/",
+  "coverage": "full",
+  "stub": true,
+  "stubNote": "This site is a JS-rendered SPA. Phase-level detail was not fetchable at build time. Tracked at phase granularity (0/12). Visit the live site and update the topics arrays below.",
+  "phases": [
+    { "id": "llmr-phase-01", "title": "Phase 1: Foundations", "priority": "must", "topics": [
+      { "id": "llmr-01-foundations", "title": "Foundations — Transformers, Tokenization, Pre-training", "papers": ["Vaswani et al. - Attention Is All You Need (2017)"] }
+    ]},
+    { "id": "llmr-phase-02", "title": "Phase 2: LLM Building", "priority": "must", "topics": [
+      { "id": "llmr-02-building", "title": "LLM Building — Architecture Choices, Training Loop, Data Pipeline", "papers": ["Touvron et al. - LLaMA (2023)"] }
+    ]},
+    { "id": "llmr-phase-03", "title": "Phase 3: Fine-tuning Methods", "priority": "must", "topics": [
+      { "id": "llmr-03-finetuning", "title": "Fine-tuning — LoRA, QLoRA, Full Fine-tune, PEFT", "papers": ["Hu et al. - LoRA (2021)"] }
+    ]},
+    { "id": "llmr-phase-04", "title": "Phase 4: Alignment", "priority": "must", "topics": [
+      { "id": "llmr-04-alignment", "title": "Alignment — RLHF, DPO, Constitutional AI", "papers": ["Ouyang et al. - InstructGPT (2022)"] }
+    ]},
+    { "id": "llmr-phase-05", "title": "Phase 5: Reasoning Models", "priority": "must", "topics": [
+      { "id": "llmr-05-reasoning", "title": "Reasoning Models — CoT, o1, DeepSeek-R1, Test-Time Compute", "papers": ["Guo et al. - DeepSeek-R1 (2025)"] }
+    ]},
+    { "id": "llmr-phase-06", "title": "Phase 6: Efficient Inference", "priority": "must", "topics": [
+      { "id": "llmr-06-inference", "title": "Efficient Inference — vLLM, PagedAttention, Quantization", "papers": ["Kwon et al. - vLLM (2023)"] }
+    ]},
+    { "id": "llmr-phase-07", "title": "Phase 7: Evaluation", "priority": "must", "topics": [
+      { "id": "llmr-07-eval", "title": "Evaluation — Benchmarks, MMLU, HumanEval, LM-Eval-Harness", "papers": [] }
+    ]},
+    { "id": "llmr-phase-08", "title": "Phase 8: RAG & Knowledge", "priority": "must", "topics": [
+      { "id": "llmr-08-rag", "title": "RAG — Dense Retrieval, Reranking, Knowledge Injection", "papers": ["Lewis et al. - RAG (2020)"] }
+    ]},
+    { "id": "llmr-phase-09", "title": "Phase 9: Agents", "priority": "must", "topics": [
+      { "id": "llmr-09-agents", "title": "Agents — ReAct, Tool Use, LangChain, Function Calling", "papers": ["Yao et al. - ReAct (2022)"] }
+    ]},
+    { "id": "llmr-phase-10", "title": "Phase 10: Multimodal LLMs", "priority": "must", "topics": [
+      { "id": "llmr-10-multimodal", "title": "Multimodal LLMs — Vision-Language, Audio, Video", "papers": ["Radford et al. - CLIP (2021)"] }
+    ]},
+    { "id": "llmr-phase-11", "title": "Phase 11: Production & Systems", "priority": "must", "topics": [
+      { "id": "llmr-11-production", "title": "Production — Serving, Monitoring, A/B Testing, Cost Optimization", "papers": [] }
+    ]},
+    { "id": "llmr-phase-12", "title": "Phase 12: Research Frontiers", "priority": "must", "topics": [
+      { "id": "llmr-12-frontier", "title": "Frontier — World Models, Long Context, Speculative Decoding", "papers": ["Leviathan et al. - Speculative Decoding (2022)"] }
+    ]}
+  ]
+}

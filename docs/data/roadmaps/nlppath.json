@@ -1,0 +1,127 @@
+{
+  "id": "nlppath",
+  "title": "NLP → Reasoning Model Mastery",
+  "sourceUrl": "https://dcsgod.github.io/Nlppath/",
+  "coverage": "full",
+  "phases": [
+    {
+      "id": "phase-01",
+      "title": "Mathematical Foundations for NLP",
+      "priority": "must",
+      "topics": [
+        { "id": "nlp-linear-algebra", "title": "Linear Algebra — Embeddings, SVD, PCA for NLP", "papers": [] },
+        { "id": "nlp-probability", "title": "Probability & Statistics for Language Models", "papers": [] },
+        { "id": "nlp-information-theory", "title": "Information Theory — Entropy, Perplexity, Mutual Information in NLP", "papers": ["Shannon - A Mathematical Theory of Communication (1948)"] }
+      ]
+    },
+    {
+      "id": "phase-02",
+      "title": "NLP Fundamentals",
+      "priority": "must",
+      "topics": [
+        { "id": "tokenization", "title": "Tokenization — BPE, WordPiece, SentencePiece, Tiktoken", "papers": ["Sennrich et al. - BPE for NMT (2016)"] },
+        { "id": "pos-tagging", "title": "POS Tagging & Morphological Analysis", "papers": [] },
+        { "id": "ner", "title": "Named Entity Recognition (NER) — CRF, BiLSTM-CRF", "papers": [] },
+        { "id": "parsing", "title": "Parsing — Constituency, Dependency, CCG", "papers": [] },
+        { "id": "text-classification", "title": "Text Classification — Naive Bayes, Logistic Regression baselines", "papers": [] }
+      ]
+    },
+    {
+      "id": "phase-03",
+      "title": "Classical NLP",
+      "priority": "must",
+      "topics": [
+        { "id": "ngrams", "title": "N-gram Language Models — Smoothing, Kneser-Ney", "papers": [] },
+        { "id": "hmm", "title": "Hidden Markov Models (HMM) — Viterbi, Baum-Welch", "papers": [] },
+        { "id": "crf", "title": "Conditional Random Fields (CRF)", "papers": ["Lafferty et al. - CRF (2001)"] },
+        { "id": "tfidf-bm25", "title": "TF-IDF, BM25 — Information Retrieval Foundations", "papers": [] },
+        { "id": "lda", "title": "Latent Dirichlet Allocation (LDA) — Topic Modeling", "papers": ["Blei et al. - LDA (2003)"] }
+      ]
+    },
+    {
+      "id": "phase-04",
+      "title": "Word Embeddings",
+      "priority": "must",
+      "topics": [
+        { "id": "word2vec", "title": "Word2Vec — Skip-Gram, CBOW, Negative Sampling", "papers": ["Mikolov et al. - Word2Vec (2013)"] },
+        { "id": "glove", "title": "GloVe — Global Vectors for Word Representation", "papers": ["Pennington et al. - GloVe (2014)"] },
+        { "id": "fasttext", "title": "FastText — Subword Embeddings", "papers": ["Bojanowski et al. - FastText (2017)"] },
+        { "id": "elmo", "title": "ELMo — Contextual Embeddings from Language Models", "papers": ["Peters et al. - ELMo (2018)"] }
+      ]
+    },
+    {
+      "id": "phase-05",
+      "title": "Neural NLP & Seq2Seq",
+      "priority": "must",
+      "topics": [
+        { "id": "lstm-gru-nlp", "title": "LSTM/GRU for NLP — Language Modeling, Seq Classification", "papers": [] },
+        { "id": "seq2seq", "title": "Seq2Seq — Encoder-Decoder for Translation & Summarization", "papers": ["Sutskever et al. - Seq2Seq (2014)"] },
+        { "id": "attention-mechanism", "title": "Attention Mechanism — Luong, Bahdanau", "papers": ["Bahdanau et al. - Neural Machine Translation with Attention (2014)"] },
+        { "id": "copy-mechanism", "title": "Copy Mechanism & Pointer Networks", "papers": ["Vinyals et al. - Pointer Networks (2015)"] }
+      ]
+    },
+    {
+      "id": "phase-06",
+      "title": "Transformers & LLM Architecture",
+      "priority": "must",
+      "topics": [
+        { "id": "transformer-architecture", "title": "Transformer — Scaled Dot-Product Attention, MHA, FFN, LayerNorm", "papers": ["Vaswani et al. - Attention Is All You Need (2017)"] },
+        { "id": "bert", "title": "BERT — Masked LM, NSP, Fine-tuning", "papers": ["Devlin et al. - BERT (2018)"] },
+        { "id": "gpt-series", "title": "GPT Series — GPT-1/2/3, Autoregressive LM", "papers": ["Brown et al. - GPT-3 (2020)", "Radford et al. - GPT-2 (2019)"] },
+        { "id": "t5", "title": "T5 — Text-to-Text Transfer Transformer", "papers": ["Raffel et al. - T5 (2019)"] },
+        { "id": "moe-architecture", "title": "Mixture of Experts (MoE) — Sparse MoE, Switch Transformer", "papers": ["Fedus et al. - Switch Transformer (2021)"] },
+        { "id": "mamba-ssm", "title": "Mamba & State Space Models", "papers": ["Gu & Dao - Mamba (2023)"] },
+        { "id": "flash-attention", "title": "FlashAttention & Efficient Attention", "papers": ["Dao et al. - FlashAttention (2022)", "Dao et al. - FlashAttention-2 (2023)"] },
+        { "id": "rope-pe", "title": "Positional Encodings — RoPE, ALiBi, NoPE", "papers": ["Su et al. - RoPE (2021)"] }
+      ]
+    },
+    {
+      "id": "phase-07",
+      "title": "LLMs & Pre-training",
+      "priority": "must",
+      "topics": [
+        { "id": "scaling-laws-nlp", "title": "Scaling Laws — Kaplan, Chinchilla, Compute-Optimal Training", "papers": ["Kaplan et al. - Scaling Laws (2020)", "Hoffmann et al. - Chinchilla (2022)"] },
+        { "id": "llama-family", "title": "LLaMA Family — LLaMA 1/2/3, Mistral, Gemma", "papers": ["Touvron et al. - LLaMA 2 (2023)"] },
+        { "id": "zero-distributed", "title": "ZeRO & Distributed Training — FSDP, Megatron-LM, DeepSpeed", "papers": ["Rajbhandari et al. - ZeRO (2020)"] },
+        { "id": "data-curation", "title": "Data Curation for LLMs — FineWeb, Dolma, Quality Filtering", "papers": ["Penedo et al. - FineWeb (2024)"] }
+      ]
+    },
+    {
+      "id": "phase-08",
+      "title": "Fine-tuning & Alignment",
+      "priority": "must",
+      "topics": [
+        { "id": "lora-qlora", "title": "LoRA & QLoRA — Parameter-Efficient Fine-tuning", "papers": ["Hu et al. - LoRA (2021)", "Dettmers et al. - QLoRA (2023)"] },
+        { "id": "rlhf", "title": "RLHF — Reward Modeling, PPO-based Alignment", "papers": ["Ouyang et al. - InstructGPT (2022)"] },
+        { "id": "dpo", "title": "DPO & Variants — Direct Preference Optimization", "papers": ["Rafailov et al. - DPO (2023)"] },
+        { "id": "constitutional-ai", "title": "Constitutional AI & Self-Critique", "papers": ["Bai et al. - Constitutional AI (2022)"] },
+        { "id": "orpo", "title": "ORPO, GRPO, SimPO — Modern Alignment Methods", "papers": ["Hong et al. - ORPO (2024)"] },
+        { "id": "instruction-tuning", "title": "Instruction Tuning — FLAN, Alpaca, WizardLM", "papers": ["Wei et al. - FLAN (2021)"] }
+      ]
+    },
+    {
+      "id": "phase-09",
+      "title": "RL for LLMs",
+      "priority": "must",
+      "topics": [
+        { "id": "ppo-llms", "title": "PPO for LLMs — KL Penalty, Value Model, GAE", "papers": ["Schulman et al. - PPO (2017)"] },
+        { "id": "grpo", "title": "GRPO — Group Relative Policy Optimization", "papers": ["Shao et al. - DeepSeekMath GRPO (2024)"] },
+        { "id": "reward-hacking", "title": "Reward Hacking & Overoptimization", "papers": ["Gao et al. - Scaling Laws for Reward Model Overoptimization (2022)"] },
+        { "id": "online-vs-offline-rl", "title": "Online vs Offline RL for LLMs — RAFT, RLOO", "papers": [] }
+      ]
+    },
+    {
+      "id": "phase-10",
+      "title": "Reasoning & Inference",
+      "priority": "must",
+      "topics": [
+        { "id": "chain-of-thought", "title": "Chain-of-Thought — Standard, Zero-Shot, Self-Consistency", "papers": ["Wei et al. - CoT (2022)", "Wang et al. - Self-Consistency (2022)"] },
+        { "id": "tree-of-thought", "title": "Tree-of-Thought & Graph-of-Thought", "papers": ["Yao et al. - Tree of Thoughts (2023)"] },
+        { "id": "prm-orm", "title": "Process & Outcome Reward Models — PRM800K, OmegaPRM", "papers": ["Lightman et al. - Let's Verify Step by Step (2023)"] },
+        { "id": "rag", "title": "RAG — Retrieval-Augmented Generation, FAISS, Reranking", "papers": ["Lewis et al. - RAG (2020)"] },
+        { "id": "deepseek-r1", "title": "DeepSeek-R1 & Test-Time Compute Scaling", "papers": ["Guo et al. - DeepSeek-R1 (2025)"] },
+        { "id": "o1-reasoning", "title": "o1 & System 2 Reasoning — Long CoT, MCTS, Best-of-N", "papers": [] }
+      ]
+    }
+  ]
+}
